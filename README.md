@@ -1,4 +1,4 @@
-# react_reactrouter_redux_immutable_typescript
+# react_react-router_redux_immutable_typescript
 记录一次使用react全家桶搭配typescript开发的环境搭建
 技术栈：
 ##### 1)react;
