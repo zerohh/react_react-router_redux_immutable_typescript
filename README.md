@@ -18,4 +18,4 @@ npm  install
 ```$xslt
 npm run start
 ```
-启动webpack-dev-server,启动后访问http://localhost:9000查看
+启动webpack-dev-server,启动后访问http://localhost:9000    查看
