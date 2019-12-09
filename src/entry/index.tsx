@@ -1,26 +1,16 @@
-import React from "react";
+import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import { createStore, applyMiddleware } from 'redux';
-import Thunk from 'redux-thunk';
-import { Provider } from 'react-redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import Immutable from 'immutable';
+import ReactCSSModules from 'react-css-modules';
+import style from './index.scss';
 
-const composeEnhancers = composeWithDevTools({});
+const Test1 = function() {
+    return (
+        <div styleName="test">wer</div>
+    );
+};
 
-import reducer from '../redux/reducer';
-const initStateImmutable = Immutable.fromJS({});
-
-const store = createStore(reducer, initStateImmutable, composeEnhancers(applyMiddleware(Thunk)));
-
-import Index from '../pages/Index/Index';
-
+const Test = ReactCSSModules(style)(Test1);
 ReactDOM.render(
-    <Provider store={store}>
-        <BrowserRouter>
-            <Index/>
-        </BrowserRouter>
-    </Provider>,
-    document.getElementById('app')
+    <Test/>,
+    document.getElementById("app")
 );
